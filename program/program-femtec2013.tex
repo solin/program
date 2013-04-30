@@ -1,19 +1,25 @@
-\documentclass[10pt, A4]{article}%
+\documentclass[10pt]{article}%
 \usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
 
-\leftmargin=0.2cm
-\oddsidemargin=-1.5cm
-\evensidemargin=-1.5cm
-\topmargin=-1cm
-\textwidth=18cm
-\textheight=24.5cm
-\pagestyle{empty}
+%\leftmargin = 0.2cm
+\oddsidemargin = -1cm
+%\evensidemargin = -1cm
+\topmargin = -3cm
+\textwidth = 18cm
+\textheight = 22.5cm
+\headheight = 3cm
+
+
+\fancyhead[L]{\includegraphics[width=2.5cm]{logo-nclab.png}}
+\fancyhead[C]{\includegraphics[width=2cm]{logo-nvidia.png}}
+\fancyhead[R]{\includegraphics[width=4cm]{logo-nstec.png}}
 
 \begin{document}
-
 \centerline{\huge FEMTEC 2013 - Monday, May 20}
 \vspace{4mm}
-
+\pagestyle{fancy}
 \begin{itemize}    
   \item 8:45 Conference opening
   \item {\bf 9:00 - 10:30 Keynote Session (Theatre)} (chairman A. Zhou) 
@@ -367,6 +373,7 @@
     \item 11:20 - 11:40 {K. Nafa}: {Equal-Order Approximation of Coupled Stokes-Darcy Problems}
     \item 11:40 - 12:00 {S. Chandrasekaran}: {A Minimum Sobolev Norm Numerical Technique for PDEs} % want be on Thursday or Friday
   \end{itemize}
+  \newpage
   \item {\bf 10:40 - 12:00 Contributed Session II-C} (chairman K. Wong) 
   \begin{itemize}
     \item 10:40 - 11:00 {M. Abdollahzadehsangroudi}: {Two Dimensional Numerical Modeling of Micro-shock Wave Creation in Nanosecond Plasma Actuators}
