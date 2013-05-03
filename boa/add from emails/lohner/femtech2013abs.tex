@@ -1,0 +1,123 @@
+
+\input usualformat
+\input abbrevs
+\input epsf
+
+\bf
+\cl{A General-Purpose Fortran to GPU Translator}
+\ms \noi
+\cl{Rainald L\"ohner}
+\cl{CFD Center, George Mason University}
+\cl{Fairfax, VA 22030-4444}
+\rm
+\bs \noi
+Even though many of those that code in Java, C++, CUDA and
+MATLAB/Mathematica may find this hard to believe, the fact
+remains that a large number of scientific computing codes
+are written either entirely or partially in Fortran.
+\par \noi
+The real value of these so-called
+legacy codes does not reside so much in the basic numerical
+techniques, but in the many physics models and engineering
+options that have been incorporated, debugged and validated
+over the years (sometimes over decades). Given that these
+options represent hundreds of man-years of dedicated and
+labour-intensive work, it appears unlikely that these codes
+will be rewritten in coming years.
+\par \noi
+It is therefore not surprising that every time a new generation
+of computer hardware appears, the imminent demise of these
+legacy codes is predicted. The observation made time and again
+is that after a few years, these same legacy codes are modified
+so that they run efficiently on the new hardware.
+\par \noi
+The appearance of graphical processing units (GPU) is yet
+another technological leap. As further increases in clockcycles
+are unlikely, GPUs may become a key component of scientific
+computing in the coming decades. The question then becomes how
+to best port scientific computing codes written in Fortran to
+GPUs in a way that is transparent, effective and error-free.
+\par \noi
+This has been the goal of ASI Parallel Fortran, a general-purpose
+Fortran to GPU translator.
+\par \noi
+While other automatic approaches often compromise on performance,
+negating the ultimate purpose of porting legacy codes to GPUs,
+ASI Parallel Fortran ensures that the unique performance requirements
+of GPUs are fulfilled.
+In summary, ASI Parallel Fortran transparently:
+\par \noi
+\item{-} Implements Fortran loops as high-performance GPU kernels;
+\item{-} Represents multi-dimensional Fortran arrays using
+a memory layout appropriate for GPU performance requirements;
+\item{-} Minimises data transfer by tracking array shapes and enforcing
+  consistency across subroutine calls;
+\item{-} Handles GPU array I/O (via read/write/print) and memory
+transfer;
+\item{-} Integrates with MPI for hybrid parallelism;
+\item{-} Maintains compatibility with pure-CPU code; and 
+\item{-} Interfaces with Thrust and other GPU libraries.
+\par \noi
+The talk will show in detail what ASI Parallel Fortran does, 
+how it is used and implemented, and demonstrate the use of 
+ASI Parallel Fortran for general purpose CFD/CEM/Thermal Finite
+Element and Finite Difference codes. The codes (automatically)
+ported to date include FEFLO, a FEM CFD code with more than a million
+lines, FEHEAT, a nonlineat thermodynamics code, and FDSOL, a FDM
+CFD code for near-incompressible flows. The smaller codes were
+ported to the GPU environment in just a few hours, demonstrating
+the ease of use and maturity of the translator.
+
+\bs \noi
+\ub{Example: Blast in A Room}
+\ms \noi
+This example, run with FEFLO, considers the flow and particle transport 
+resulting from a blast in a room where dilute material has been deposited. 
+The flow interacts with a powder-like material that is modeled via particles.
+The geometry, together with the solution, can be discerned from
+Figure~1.
+
+\vbox{
+\vskip 18pt
+\centerline{
+\epsfxsize=8.0cm
+\epsffile{blast_in_room_part_velo.eps}
+}
+\vskip 5pt
+\centerline{Figure 1~~Blast in Room With Dilute Material}
+%\vskip 18pt
+}
+
+\ms \noi
+Table 1 shows timings studies carried out with the following set of
+parameters: compressible Euler, ideal gas EOS, explicit FEM-FCT,
+initialization from a 1-D file, 4.0~Mels, 93.5~Kparts, 60 timesteps.
+One can see that the automatically produced GPU code runs efficiently.
+
+$$\vbox{
+\ms
+\leftline {{\bf Table 1} \quad Blast in Room With Dilute Material}
+\bigskip
+\hrule
+\settabs
+\+& nelem       \quad 
+  & CPU/GPU     \quad \quad \quad
+  & mvecl       \quad 
+  & Time (sec)  \cr
+                                                     %SAMPLE LINE
+\smallskip
+\+& nelem & CPU/GPU & mvecl & Time (sec) \cr
+\medskip
+\hrule
+\medskip
+\+& 4.0 M & Xeon E5530 (1) & 32 & 305 \cr
+\+& 4.0 M & Xeon E5530 (2) & 32 & 178 \cr
+\+& 4.0 M & Xeon E5530 (4) & 32 & 113 \cr
+\+& 4.0 M & Xeon E5530 (6) & 32 &  79 \cr
+\+& 4.0 M & Xeon E5530 (8) & 32 &  68 \cr
+\+& 4.0 M & Tesla C2070    & 51200 &  49 \cr
+\medskip
+\hrule }$$
+
+\vfill \eject
+\end

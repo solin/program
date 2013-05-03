@@ -1,0 +1,53 @@
+\documentclass[article,A4,11pt]{llncs}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage{epsf}
+\usepackage{bm}
+\usepackage{cases}
+
+\leftmargin=0.2cm
+\oddsidemargin=1.2cm
+\evensidemargin=0cm
+\topmargin=0cm
+\textwidth=15.5cm
+\textheight=21.5cm
+\pagestyle{plain}
+\begin{document}
+
+\title{Estimating Radial Railway Network Improvement With a CAS}
+\author{} 
+\tocauthor{Jos\'e Luis Gal\'an--Garc\'{\i}a} 
+\institute{}
+\maketitle
+
+\begin{center}
+{\large Eugenio Roanes--Lozano$^1$, Alberto Garc\'{\i}a--\'Alvarez$^2$,\\ 
+\underline{Jos\'e Luis Gal\'an--Garc\'{\i}a}$^3$, Luis Mesa$^4$}\\ \quad \\
+$^1$Algebra Dept., Universidad Complutense de Madrid, Spain\\
+$^2$Deputy Director for Renfe (Spanish Railways) Passengers Services, Spain\\
+$^3$Applied Mathematics Dept., Universidad de M\'alaga, Spain\\
+$^4$Spanish Railways Foundation, Spain\\ \quad \\
+$^1${\tt eroanes@mat.ucm.es, $^2$albertoga@renfe.es, \\
+$^3$jl\_galan@uma.es, $^4$observatoriodelferrocarril@ffe.es}
+\end{center}
+
+\section*{Abstract}
+
+The Spanish railway network is very complex, with two different track gauges: the \textit{Iberian} gauge ($1667 mm$) and the \textit{international gauge} ($1435 mm$), the latter used in the high speed network. Only China has nowadays a longer high speed railway network. All new lines have been built with double track and top technologies
+($\geq 300 km/h$ track design, \textit{ERTMS} traffic management system, $25000 KV$ AC electrification, etc.). But there are controversial opinions among experts regarding how the network should grow. A possibility could be to build very high speed trunks followed by \textit{not so high speed} antennas (the latter not reserved to high speed trains). We have two research lines focused on the comparison of different alternatives. On one hand, we have developed a computer package that is able to calculate precise timings, consumptions, costs, emissions, best routes, etc., for each piece of \textit{Renfe}'s (main railway operator) rolling stock running on \textit{Adif}'s (infrastructure company) lines [1]. On the other hand, we have developed what we have called \textit{isochrone circle graphs} and a \textit{geometric index} for radial railway networks improvement estimation [2]. These graphs were inspired by \textit{isochrone diagrams}, but also take into consideration the population served by each line. This latter article was illustrated with a sketch constructed with a Dynamic Geometry System and used sliders to change the input parameters (timing to each peripheric destination and population of these destinations). Although very comfortable to use, altering the number of destinations considered required to construct a complete new sketch. We have therefore begun from scratch and have designed and implemented a complete new package in the CAS \textit{Maple} that takes as input the lists of destinations, timings and populations and builds the corresponding \textit{isochrone circle graphs} and performs all the corresponding calculations. Moreover, symbolic computations (like obtaining local extrema) can be now computed.
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+\bibitem{Optimal Route Finding and Rolling--Stock Selection for the Spanish Railways}
+{\sc A. Hernando and E. Roanes--Lozano and A. Garc\'{\i}a--\'Alvarez and L. Mesa and I. Gonz\'alez--Franco}. {Optimal Route Finding and Rolling--Stock Selection for the Spanish Railways}. Comp. in Sci. \& Eng. (2012) 14/4, 82--89,  http://dx.doi.org/10.1109/MCSE.2012.80.
+
+\bibitem{A geometric approach to the estimation of radial railway network improvement}
+{\sc E. Roanes--Lozano and A. Garc\'{\i}a--\'Alvarez and A. Hernando}. {A geometric approach to the estimation of radial railway network improvement}. Rev. R. Acad. Cienc. Exactas F\'is. Nat., Ser. A Mat. RACSAM (2012) 106/1, 35--46, http://dx.doi.org/10.1007/s13398-011-0050-6.
+\end{thebibliography}
+
+\end{document}
