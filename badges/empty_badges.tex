@@ -1,0 +1,38 @@
+\documentclass[12pt]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{multirow}
+
+\textwidth 200mm
+\textheight 290mm
+\oddsidemargin -22mm
+\topmargin -30mm
+\itemindent 0mm
+\parindent 0mm
+
+\newcommand{\card}
+{
+	\begin{tabular}{|p{100mm}}
+		\hline\centering\vspace{10pt}
+		{\Large FEMTEC 2013}\\
+		{\small 4th International Congress}\\
+		{\small on Computational Engineering and Sciences}\\
+		\vspace{5pt}\rule[15pt]{175pt}{0.5pt}\\
+		%{\LARGE \sc \bf #1}\\
+		\vspace{15pt}
+		\begin{tabular}{cp{6cm}c}
+			\multirow{3}{*}{{\includegraphics[width=1.5cm]{logo-nclab.png}}} &  & \multirow{3}{*}{\includegraphics[width=1.5cm]{logo-nvidia.png}}\\
+			& \vspace{10pt} & \\
+			& \centering \includegraphics[width=3.2cm]{logo-nstec.png} &  \\
+		\end{tabular}	
+		\vspace{10pt}
+	\end{tabular}
+}
+
+\begin{document}
+\pagestyle{empty}
+
+\card
+\card
+
+\end{document}
