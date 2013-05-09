@@ -1,282 +1,207 @@
-\documentclass[12pt]{book}
+\documentclass[letterpaper, landscape,12pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{multirow}
+\usepackage{array}
 
-\textwidth 190mm
-\textheight 290mm
-\oddsidemargin -15mm
-\evensidemargin -15mm
-\topmargin -30mm
+
+\textwidth 230mm
+\textheight 240mm
+\oddsidemargin -31mm
+\topmargin -35mm
 \itemindent 0mm
 \parindent 0mm
 
-\newcommand{\card}[4]
+\renewcommand\arraystretch{1}
+\renewcommand\tabcolsep{0pt}
+
+\newcommand{\OneSideEmptyBadge}
 {
-	\begin{tabular}{|p{90mm}}
-		\hline\centering\vspace{10pt}
-		{\Large FEMTEC 2013}\\
-		{\small 4th International Congress}\\
-		{\small on Computational Engineering and Sciences}\\
-		\vspace{5pt}\rule[15pt]{175pt}{0.5pt}\\
-		{\LARGE \sc \bf #1}\\
-		\vspace{7pt}
-		\begin{tabular}{cp{5.1cm}c}
-			\multirow{3}{*}{{\includegraphics[width=1.5cm]{logo-nclab.png}}} &  \centering{\footnotesize #2} & \multirow{3}{*}{\includegraphics[width=1.5cm]{logo-nvidia.png}}\\
-			& \centering{\footnotesize #3}, {\footnotesize #4} \vspace{3pt} & \\
-			& \centering \includegraphics[width=3.2cm]{logo-nstec.png} &  \\
-		\end{tabular}	
-		\vspace{5pt}
+	\begin{tabular}{|p{113mm}|}
+		\hline
+		\centering
+		\vspace{5mm}
+		{\huge FEMTEC 2013}\\
+		%{\small Congress on Computational Engineering and Sciences}\\
+		\vspace{-2mm}\rule{70mm}{0.2mm}\\
+		\vspace{28.5mm}
+		\begin{tabular}{cp{54mm}c}
+			\multirow{4}{*}{{\includegraphics[width=25mm]{logo-nclab.png}}} &  & \multirow{4}{*}{\includegraphics[width=20mm]{logo-nvidia.png}}\\
+			& \vspace{10mm} & \\
+			\multicolumn{3}{c}{\centering \includegraphics[width=55mm]{logo-nstec.png}} \\
+		\end{tabular}
+		\vspace{2mm}
 	\end{tabular}
+}
+
+\newcommand{\TwoSideEmptyBadge}
+{
+	\begin{tabular}{|cc|}
+	\OneSideEmptyBadge&\OneSideEmptyBadge\\
+	\end{tabular}
+	\newline
+}
+
+\newcommand{\OneSideBadge}[4]
+{
+	\begin{tabular}{|p{113mm}|}
+		\hline
+		\centering
+		\vspace{5mm}
+		{\huge FEMTEC 2013}\\
+		%{\small Congress on Computational Engineering and Sciences}\\
+		\vspace{-2mm}\rule{70mm}{0.2mm}\\
+		\vspace{10mm}
+		{\Huge \bf #1}\\
+		\vspace{5mm}
+		\renewcommand{\arraystretch}{1.5}
+		\begin{tabular}{cp{54mm}c}
+%       		\multicolumn{3}{c}{\small #2} \\
+%			\includegraphics[width=22mm]{logo-nclab.png} & \centering {\small #3}, {\small #4} \vspace{6mm} & \includegraphics[width=18mm]{logo-nvidia.png} \\     		
+%			\multirow{2}{*}{{\includegraphics[width=5mm]{logo-nclab.png}}} & \centering {\small #3}, {\small #4} \vspace{6mm} & \multirow{2}{*}{\includegraphics[width=8mm]{logo-nvidia.png}}\\
+			\multirow{3}{*}{{\includegraphics[width=25mm]{logo-nclab.png}}} & \centering{\small #2} & \multirow{3}{*}{\includegraphics[width=20mm]{logo-nvidia.png}}\\
+			& \centering{\small #3}, {\small #4} \vspace{5mm} & \\
+			\multicolumn{3}{c}{\centering \includegraphics[width=55mm]{logo-nstec.png}} \\
+%			& \centering \includegraphics[width=55mm]{logo-nstec.png} & \\
+		\end{tabular}
+		\vspace{2mm}
+	\end{tabular}
+}
+
+\newcommand{\TwoSideBadge}[4]
+{
+	\begin{tabular}{cc}
+	\OneSideBadge{#1}{#2}{#3}{#4}&\OneSideBadge{#1}{#2}{#3}{#4}\\
+	\end{tabular}
+	\newline
 }
 
 \begin{document}
 \pagestyle{empty}
 
-\card{Mohammadmahdi  Abdollahzadehsangroudi}{University of Beira Interior}{Covilha}{Portugal}
-\card{Mohammadmahdi  Abdollahzadehsangroudi}{University of Beira Interior}{Covilha}{Portugal}
-\card{Gabriel Aguilera}{University of Malaga}{Malaga}{Spain}
-\card{Gabriel Aguilera}{University of Malaga}{Malaga}{Spain}
-\card{Nissrine Akkari}{University of La Rochelle}{La Rochelle}{France}
-\card{Nissrine Akkari}{University of La Rochelle}{La Rochelle}{France}
-\card{Khaled Alhussan}{King Abdulaziz City for Science and Technology KACST}{Riyadh}{Saudi Arabia}
-\card{Khaled Alhussan}{King Abdulaziz City for Science and Technology KACST}{Riyadh}{Saudi Arabia}
-\card{Ibraheem Alolyan}{King Saud University }{RIyadh}{Saudi Araabia}
-\card{Ibraheem Alolyan}{King Saud University }{RIyadh}{Saudi Araabia}
-\card{Franck Assous}{Ariel University}{Ariel}{Israel}
-\card{Franck Assous}{Ariel University}{Ariel}{Israel}
-\card{Melike Aydogan}{Isik University}{Istanbul}{Turkey}
-\card{Melike Aydogan}{Isik University}{Istanbul}{Turkey}
-\card{Christopher Basting}{University Erlangen-Nuremberg}{Erlangen}{Germany}
-\card{Christopher Basting}{University Erlangen-Nuremberg}{Erlangen}{Germany}
-\card{Steffen Basting}{University Erlangen-Nuremberg}{Erlangen}{Germany}
-\card{Steffen Basting}{University Erlangen-Nuremberg}{Erlangen}{Germany}
-\card{Melanie Bittl}{University Erlangen-Nuremberg}{Erlangen}{Germany}
-\card{Melanie Bittl}{University Erlangen-Nuremberg}{Erlangen}{Germany}
-\card{Markus Blatt}{HPC Simulation Software \& Services}{Heidelberg}{Germany}
-\card{Markus Blatt}{HPC Simulation Software \& Services}{Heidelberg}{Germany}
-\card{Paola Brambilla}{Department of Aerospace Science \& Technology, Politecnico di Milano}{Milano}{Italy}
-\card{Paola Brambilla}{Department of Aerospace Science \& Technology, Politecnico di Milano}{Milano}{Italy}
-\card{Moritz Braun}{University of South Africa}{Pretoria}{South Africa}
-\card{Moritz Braun}{University of South Africa}{Pretoria}{South Africa}
-\card{Jesse Lee Chan}{University of Texas at Austin}{Austin}{United States}
-\card{Jesse Lee Chan}{University of Texas at Austin}{Austin}{United States}
-\card{Shivkumar Chandrasekaran}{University of California}{Santa Barbara}{United States}
-\card{Shivkumar Chandrasekaran}{University of California}{Santa Barbara}{United States}
-\card{Joel Chaskalovic}{DALEMBERT, University Pierre and Marie Curie}{Paris}{France}
-\card{Joel Chaskalovic}{DALEMBERT, University Pierre and Marie Curie}{Paris}{France}
-\card{Heyrim Cho}{Brown University}{Providence}{USA}
-\card{Heyrim Cho}{Brown University}{Providence}{USA}
-\card{Minseok Choi}{Brown University}{Providence}{USA}
-\card{Minseok Choi}{Brown University}{Providence}{USA}
-\card{Eric Chung}{The Chinese University of Hong Kong}{Shatin}{Hong Kong}
-\card{Eric Chung}{The Chinese University of Hong Kong}{Shatin}{Hong Kong}
-\card{Irina Ciobanescu Husanu}{Drexel University}{Philadelphia}{USA}
-\card{Irina Ciobanescu Husanu}{Drexel University}{Philadelphia}{USA}
-\card{Jonathan Cohen}{NVIDIA}{Ann Arbor}{USA}
-\card{Jonathan Cohen}{NVIDIA}{Ann Arbor}{USA}
-\card{Emanuele Danovaro}{IMATI - CNR}{Genova}{Italy}
-\card{Emanuele Danovaro}{IMATI - CNR}{Genova}{Italy}
-\card{Elise Helene J. De Doncker}{Dept. of Computer Science, Western Michigan University}{Kalamazoo}{U.S.A.}
-\card{Elise Helene J. De Doncker}{Dept. of Computer Science, Western Michigan University}{Kalamazoo}{U.S.A.}
-\card{Carlo De Falco}{MOX, Department of Mathematics, Politecnico di Milano}{Milano}{Italy}
-\card{Carlo De Falco}{MOX, Department of Mathematics, Politecnico di Milano}{Milano}{Italy}
-\card{Ivo Dolezel}{Czech Technical University }{Praha 6}{Czech Republic}
-\card{Ivo Dolezel}{Czech Technical University }{Praha 6}{Czech Republic}
-\card{Suchuan Dong}{Purdue University}{West Lafayette}{USA}
-\card{Suchuan Dong}{Purdue University}{West Lafayette}{USA}
-\card{Mahmoud El-Borai}{Professor of Mathematics Faculty of Science Alexandria University Alexandria Egypt}{Alexandria Egypt}{Egypt}
-\card{Mahmoud El-Borai}{Professor of Mathematics Faculty of Science Alexandria University Alexandria Egypt}{Alexandria Egypt}{Egypt}
-\card{Omid Reza Esmaeili Motlagh}{UNIVERSITY TEKNIKAL MALAYSIA MELAKA}{Melaka}{MALAYSIA}
-\card{Omid Reza Esmaeili Motlagh}{UNIVERSITY TEKNIKAL MALAYSIA MELAKA}{Melaka}{MALAYSIA}
-\card{Charbel Farhat}{Stanford University}{Stanford}{USA}
-\card{Charbel Farhat}{Stanford University}{Stanford}{USA}
-\card{Hadi Fekrmandi}{PhD Student}{Miami}{United States}
-\card{Hadi Fekrmandi}{PhD Student}{Miami}{United States}
-\card{Mike Fowler}{Clarkson University}{Potsdam}{United States}
-\card{Mike Fowler}{Clarkson University}{Potsdam}{United States}
-\card{Jose Luis Galan}{Universidad de Malaga}{Malaga}{Spain}
-\card{Jose Luis Galan}{Universidad de Malaga}{Malaga}{Spain}
-\card{Mariangel Garcia}{Computational Science Research Center - San Diego State University}{San Diego}{US}
-\card{Mariangel Garcia}{Computational Science Research Center - San Diego State University}{San Diego}{US}
-\card{Victor Eralingga Ginting}{University of Wyoming}{Laramie}{USA}
-\card{Victor Eralingga Ginting}{University of Wyoming}{Laramie}{USA}
-\card{Yuliya Gorb}{University of Houston}{Houston, TX}{U.S.A.}
-\card{Yuliya Gorb}{University of Houston}{Houston, TX}{U.S.A.}
-\card{Nicolin Govender}{University of Pretoria}{Pretoria}{South africa}
-\card{Nicolin Govender}{University of Pretoria}{Pretoria}{South africa}
-\card{Ouahiba Guerri}{Université de La Rochelle}{La Rochelle}{France}
-\card{Ouahiba Guerri}{Université de La Rochelle}{La Rochelle}{France}
-\card{Mingyan He}{Tongji University}{Shanghai}{China}
-\card{Mingyan He}{Tongji University}{Shanghai}{China}
-\card{Jeffrey Heys}{Montana State University}{Bozeman}{United States}
-\card{Jeffrey Heys}{Montana State University}{Bozeman}{United States}
-\card{Seyed Mahdi Homayouni}{Department of Industrial Engineering, Lenjan Branch, Islamic Azad University, }{Isfahan}{Iran}
-\card{Seyed Mahdi Homayouni}{Department of Industrial Engineering, Lenjan Branch, Islamic Azad University, }{Isfahan}{Iran}
-\card{Neihad Hussen Al-Khalidy}{SLR Consulting}{Lane Cove, NSW}{Australia}
-\card{Neihad Hussen Al-Khalidy}{SLR Consulting}{Lane Cove, NSW}{Australia}
-\card{Rakesh Jha}{SVNIT}{Surat}{India}
-\card{Rakesh Jha}{SVNIT}{Surat}{India}
-\card{August Johansson}{UC Berkeley}{Berkeley}{USA}
-\card{August Johansson}{UC Berkeley}{Berkeley}{USA}
-\card{Suwan Juntiwasarakij}{King Mongkut's Institute of Technology Ladkrabang}{Bangkok}{Thailand}
-\card{Suwan Juntiwasarakij}{King Mongkut's Institute of Technology Ladkrabang}{Bangkok}{Thailand}
-\card{Andrew Kail}{University of Tennessee}{Knoxville}{United States of America}
-\card{Andrew Kail}{University of Tennessee}{Knoxville}{United States of America}
-\card{Pavel Karban}{University of West Bohemia}{Pilsen}{Czech Republic}
-\card{Pavel Karban}{University of West Bohemia}{Pilsen}{Czech Republic}
-\card{Sandeep Koranne}{Mentor Graphics Corporation}{Wilsonville}{USA}
-\card{Sandeep Koranne}{Mentor Graphics Corporation}{Wilsonville}{USA}
-\card{Lukas Korous}{University of West Bohemia}{Plzeň}{Czech Republic}
-\card{Lukas Korous}{University of West Bohemia}{Plzeň}{Czech Republic}
-\card{Lukáš Koudela}{University of West Bohemia}{Pilsen}{Czech Republic}
-\card{Lukáš Koudela}{University of West Bohemia}{Pilsen}{Czech Republic}
-\card{Fritz Kretzschmar}{Graduate School CE, Technical University Darmstadt}{Darmstadt}{Germany}
-\card{Fritz Kretzschmar}{Graduate School CE, Technical University Darmstadt}{Darmstadt}{Germany}
-\card{Petr Kropík}{University of West Bohemia in Pilsen}{Plzeň}{Czech Republic}
-\card{Petr Kropík}{University of West Bohemia in Pilsen}{Plzeň}{Czech Republic}
-\card{Zdeněk Kubík}{University of West Bohemia}{Plzen}{Czech Republic}
-\card{Zdeněk Kubík}{University of West Bohemia}{Plzen}{Czech Republic}
-\card{Michal Kuraz}{Czech University of Life Sciences Prague, Faculty of Environmental Sciences}{Praha 6 - Suchdol}{Czech Republic}
-\card{Michal Kuraz}{Czech University of Life Sciences Prague, Faculty of Environmental Sciences}{Praha 6 - Suchdol}{Czech Republic}
-\card{Pavel Kůs}{University of West Bohemia}{Pilsen}{Czech Republic}
-\card{Pavel Kůs}{University of West Bohemia}{Pilsen}{Czech Republic}
-\card{Dmitri Kuzmin}{University Erlangen-Nuremberg}{Erlangen}{Germany}
-\card{Dmitri Kuzmin}{University Erlangen-Nuremberg}{Erlangen}{Germany}
-\card{Walid Larbi}{Structural Mechanics and Coupled Systems Laboratory, Conservatoire National des Arts et Métiers}{Paris}{France}
-\card{Walid Larbi}{Structural Mechanics and Coupled Systems Laboratory, Conservatoire National des Arts et Métiers}{Paris}{France}
-\card{Mats G Larson}{Umea University}{Umea}{Sweden}
-\card{Mats G Larson}{Umea University}{Umea}{Sweden}
-\card{Raphaël Léger}{Inria Sophia-Antipolis Méditerrannée}{Sophia-Antipolis}{France}
-\card{Raphaël Léger}{Inria Sophia-Antipolis Méditerrannée}{Sophia-Antipolis}{France}
-\card{Jichun Li}{University of Nevada Las Vegas}{Las Vegas}{USA}
-\card{Jichun Li}{University of Nevada Las Vegas}{Las Vegas}{USA}
-\card{Shengtai Li}{Los Alamos National Laboratory}{Los Alamos}{USA}
-\card{Shengtai Li}{Los Alamos National Laboratory}{Los Alamos}{USA}
-\card{Wenyuan Liao}{University of Calgary}{Calgary}{Canada}
-\card{Wenyuan Liao}{University of Calgary}{Calgary}{Canada}
-\card{Rainald Lohner}{George Mason University}{Fairfax, VA}{USA}
-\card{Rainald Lohner}{George Mason University}{Fairfax, VA}{USA}
-\card{Aaron Luttman}{National Security Technologies, LLC}{Las Vegas, NV}{USA}
-\card{Aaron Luttman}{National Security Technologies, LLC}{Las Vegas, NV}{USA}
-\card{Frantisek Mach}{University of West Bohemia}{Pilsen}{Czech Republic}
-\card{Frantisek Mach}{University of West Bohemia}{Pilsen}{Czech Republic}
-\card{Eric Machorro}{National Security Technologies, LLC}{North Las Vegas}{USA}
-\card{Eric Machorro}{National Security Technologies, LLC}{North Las Vegas}{USA}
-\card{Hadi Manap}{University of Malaysia Pahang (UMP)}{Kuantan}{Malaysia}
-\card{Hadi Manap}{University of Malaysia Pahang (UMP)}{Kuantan}{Malaysia}
-\card{Bradley McCaskill}{University of Wyoming}{Laramie}{USA}
-\card{Bradley McCaskill}{University of Wyoming}{Laramie}{USA}
-\card{Scott Miller}{Penn State University}{State College}{USA}
-\card{Scott Miller}{Penn State University}{State College}{USA}
-\card{Misun Min}{Argonne National Laboratory}{Argonne}{U.S.A.}
-\card{Misun Min}{Argonne National Laboratory}{Argonne}{U.S.A.}
-\card{Bill Mitchell}{National Institute of Standards and Technology}{Gaithersburg}{USA}
-\card{Bill Mitchell}{National Institute of Standards and Technology}{Gaithersburg}{USA}
-\card{Noraini Mohd Razali}{Universiti Malaysia Pahang}{Pekan}{Malaysia}
-\card{Noraini Mohd Razali}{Universiti Malaysia Pahang}{Pekan}{Malaysia}
-\card{Kamel Nafa}{Sultan Qaboos University}{Muscat}{Oman}
-\card{Kamel Nafa}{Sultan Qaboos University}{Muscat}{Oman}
-\card{Monika Neda}{Universit of Nevada Las Vegas}{Las Vegas}{USA}
-\card{Monika Neda}{Universit of Nevada Las Vegas}{Las Vegas}{USA}
-\card{Marco Nehmeier}{University of Würzburg}{Würzburg}{Germany}
-\card{Marco Nehmeier}{University of Würzburg}{Würzburg}{Germany}
-\card{Jens Niegemann}{ETH Zurich}{Zurich}{Switzerland}
-\card{Jens Niegemann}{ETH Zurich}{Zurich}{Switzerland}
-\card{Michele Nini}{Politecnico di Milano}{Milano}{Italy}
-\card{Michele Nini}{Politecnico di Milano}{Milano}{Italy}
-\card{Jan Novak}{Brno University of Technology, Faculty of Civil Engineering}{Brno}{Czech Republic}
-\card{Jan Novak}{Brno University of Technology, Faculty of Civil Engineering}{Brno}{Czech Republic}
-\card{Nicole Olivares}{Portland State University}{Portland, OR}{US}
-\card{Nicole Olivares}{Portland State University}{Portland, OR}{US}
-\card{Jeffrey Scott Ovall}{University of Kentucky}{Lexington}{USA}
-\card{Jeffrey Scott Ovall}{University of Kentucky}{Lexington}{USA}
-\card{Alberto Paoluzzi}{Roma Tre University}{Rome}{Italy}
-\card{Alberto Paoluzzi}{Roma Tre University}{Rome}{Italy}
-\card{Dimitrios I. Papadimitriou}{Department of Mechanical Engineering, University of Thessaly}{Volos}{Greece}
-\card{Dimitrios I. Papadimitriou}{Department of Mechanical Engineering, University of Thessaly}{Volos}{Greece}
-\card{Petra Pořízková}{Czech Technical University in Prague}{Prague 2}{Czech Republic}
-\card{Petra Pořízková}{Czech Technical University in Prague}{Prague 2}{Czech Republic}
-\card{Muwook Pyeon}{Konkuk University}{Seoul}{Republic of Korea}
-\card{Muwook Pyeon}{Konkuk University}{Seoul}{Republic of Korea}
-\card{Minvydas Ragulskis}{Kaunas University of Technology}{Kaunas}{Lithuania}
-\card{Minvydas Ragulskis}{Kaunas University of Technology}{Kaunas}{Lithuania}
-\card{Saeed Rahman}{Northwestern Polytechnical University}{Xian}{China}
-\card{Saeed Rahman}{Northwestern Polytechnical University}{Xian}{China}
-\card{Barbara Re}{Department of Aerospace Science \& Technology, Politecnico di Milano}{Milano}{ITALY}
-\card{Barbara Re}{Department of Aerospace Science \& Technology, Politecnico di Milano}{Milano}{ITALY}
-\card{Nathan V. Roberts}{University of Texas at Austin}{Austin, TX}{USA}
-\card{Nathan V. Roberts}{University of Texas at Austin}{Austin, TX}{USA}
-\card{James Rossmanith}{Iowa State University}{Ames, IA}{USA}
-\card{James Rossmanith}{Iowa State University}{Ames, IA}{USA}
-\card{Florian Rudolf}{Vienna University of Technology}{Vienna}{Austria}
-\card{Florian Rudolf}{Vienna University of Technology}{Vienna}{Austria}
-\card{Rafał Rumin}{AGH University of Science and Technology}{Krakow}{Poland}
-\card{Rafał Rumin}{AGH University of Science and Technology}{Krakow}{Poland}
-\card{Karl Rupp}{Argonne National Laboratory}{Argonne, IL}{USA}
-\card{Karl Rupp}{Argonne National Laboratory}{Argonne, IL}{USA}
-\card{Andrea Sacconi}{Department of Mathematics - Imperial College London}{London}{United Kingdom}
-\card{Andrea Sacconi}{Department of Mathematics - Imperial College London}{London}{United Kingdom}
-\card{Eduardo Sanchez}{San Diego State University}{San Diego}{USA}
-\card{Eduardo Sanchez}{San Diego State University}{San Diego}{USA}
-\card{Bartosz Sawicki}{Warsaw University of Technology}{Warsaw}{Poland}
-\card{Bartosz Sawicki}{Warsaw University of Technology}{Warsaw}{Poland}
-\card{Sascha Schnepp}{ETH Zurich}{Zurich}{Switzerland}
-\card{Sascha Schnepp}{ETH Zurich}{Zurich}{Switzerland}
-\card{Pitam Singh}{Motilal Nehru National Institute of Technology, Allahabad}{Allahabad}{India}
-\card{Pitam Singh}{Motilal Nehru National Institute of Technology, Allahabad}{Allahabad}{India}
-\card{Priyamvada Singh}{University of Allahabad}{Allahabad}{India}
-\card{Priyamvada Singh}{University of Allahabad}{Allahabad}{India}
-\card{Pavel Solin}{University of Nevada}{Reno}{USA}
-\card{Pavel Solin}{University of Nevada}{Reno}{USA}
-\card{Shailesh Kumar Srivastava}{Indian Institute of Technology Roorkee, Roorkee, Uttarakhand}{Roorkee}{India}
-\card{Shailesh Kumar Srivastava}{Indian Institute of Technology Roorkee, Roorkee, Uttarakhand}{Roorkee}{India}
-\card{Adisak Sukul}{King Mongkut’s Institute of Technology Ladkrabang (KMITL)}{Bangkok}{Thailand}
-\card{Adisak Sukul}{King Mongkut’s Institute of Technology Ladkrabang (KMITL)}{Bangkok}{Thailand}
-\card{Yuzhou Sun}{University of Nevada, Las Vegas}{Las Vegas}{United States}
-\card{Yuzhou Sun}{University of Nevada, Las Vegas}{Las Vegas}{United States}
-\card{Pengtao Sun}{University of Nevada Las Vegas}{Las Vegas}{USA}
-\card{Pengtao Sun}{University of Nevada Las Vegas}{Las Vegas}{USA}
-\card{Petr Svacek}{Czech Technical University, Faculty of Mechanical Engineering, Dep. of Technical Mathematics}{Prague}{Czech Republic}
-\card{Petr Svacek}{Czech Technical University, Faculty of Mechanical Engineering, Dep. of Technical Mathematics}{Prague}{Czech Republic}
-\card{Ghanshyam Singh Thakur}{MANIT,Bhopal}{Bhopal}{India}
-\card{Ghanshyam Singh Thakur}{MANIT,Bhopal}{Bhopal}{India}
-\card{Mary Thomas}{San Diego State University}{San Diego}{USA}
-\card{Mary Thomas}{San Diego State University}{San Diego}{USA}
-\card{Gretar Tryggvason}{University of Notre Dame}{Notre Dame}{USA}
-\card{Gretar Tryggvason}{University of Notre Dame}{Notre Dame}{USA}
-\card{Federica Vignati}{Politecnico di Milano, Dipartimento di Scienze e Tecnologie Aerospaziali}{Milano}{Italy}
-\card{Federica Vignati}{Politecnico di Milano, Dipartimento di Scienze e Tecnologie Aerospaziali}{Milano}{Italy}
-\card{Jan Vorel}{Czech Technical University in Prague}{Prague}{Czech Republic}
-\card{Jan Vorel}{Czech Technical University in Prague}{Prague}{Czech Republic}
-\card{Zhangping Wei}{The University of Mississippi}{Oxford}{USA}
-\card{Zhangping Wei}{The University of Mississippi}{Oxford}{USA}
-\card{Josef Weinbub}{Vienna University of Technology}{Vienna}{Austria}
-\card{Josef Weinbub}{Vienna University of Technology}{Vienna}{Austria}
-\card{Tim Wildey}{Sandia National Labs}{Albuquerque}{USA}
-\card{Tim Wildey}{Sandia National Labs}{Albuquerque}{USA}
-\card{Freddie David Witherden}{Imperial College London}{London}{United Kingdom}
-\card{Freddie David Witherden}{Imperial College London}{London}{United Kingdom}
-\card{Kwai Wong}{University of Tennessee}{Knoxville}{USA}
-\card{Kwai Wong}{University of Tennessee}{Knoxville}{USA}
-\card{Juncai Xu}{Hohai university}{Nanjing}{China}
-\card{Juncai Xu}{Hohai university}{Nanjing}{China}
-\card{Pramod Kumar Yadav}{Motilal Nehru National Institute of Technology Allahabad}{Allahabad}{India}
-\card{Pramod Kumar Yadav}{Motilal Nehru National Institute of Technology Allahabad}{Allahabad}{India}
-\card{Xiu Yang}{Brown University}{Providence}{USA}
-\card{Xiu Yang}{Brown University}{Providence}{USA}
-\card{Daegil  Yang}{Texas A\&M University }{College Station}{United States}
-\card{Daegil  Yang}{Texas A\&M University }{College Station}{United States}
-\card{Masayuki Yano}{Massachusetts Institute of Technology}{Cambridge}{United States}
-\card{Masayuki Yano}{Massachusetts Institute of Technology}{Cambridge}{United States}
-\card{Masaya Yoshikawa}{Meijo university}{Nagoya}{Japan}
-\card{Masaya Yoshikawa}{Meijo university}{Nagoya}{Japan}
-\card{Yue Yu}{Brown University}{Providence}{USA}
-\card{Yue Yu}{Brown University}{Providence}{USA}
-\card{Mohsen Zayernouri}{Division of Applied Mathematics, Brown University}{Providence}{USA}
-\card{Mohsen Zayernouri}{Division of Applied Mathematics, Brown University}{Providence}{USA}
-\card{Wu Zhang}{Shanghai University}{Shanghai}{China}
-\card{Wu Zhang}{Shanghai University}{Shanghai}{China}
-\card{Aihui Zhou}{Academy of Mathematics and Systems Sciences, Chinese Academy of Sciences}{Beijing}{China}
-\card{Aihui Zhou}{Academy of Mathematics and Systems Sciences, Chinese Academy of Sciences}{Beijing}{China}
+\TwoSideEmptyBadge
+\TwoSideBadge{\LARGE M. Abdollahzadehsangroudi}{University of Beira Interior}{Covilha}{Portugal}
+
+\TwoSideBadge{Gabriel Aguilera}{University of Malaga}{Malaga}{Spain}
+\TwoSideBadge{Nissrine Akkari}{University of La Rochelle}{La Rochelle}{France}
+\TwoSideBadge{Khaled Alhussan}{King Abdulaziz City for Science and Technology}{Riyadh}{Saudi Arabia}
+\TwoSideBadge{Ibraheem Alolyan}{King Saud University }{RIyadh}{Saudi Arabia}
+\TwoSideBadge{Franck Assous}{Ariel University}{Ariel}{Israel}
+\TwoSideBadge{Melike Aydogan}{Isik University}{Istanbul}{Turkey}
+\TwoSideBadge{Christopher Basting}{University Erlangen-Nuremberg}{Erlangen}{Germany}
+\TwoSideBadge{Steffen Basting}{University Erlangen-Nuremberg}{Erlangen}{Germany}
+\TwoSideBadge{Melanie Bittl}{University Erlangen-Nuremberg}{Erlangen}{Germany}
+\TwoSideBadge{Markus Blatt}{HPC Simulation Software \&~Services}{Heidelberg}{Germany}
+\TwoSideBadge{Paola Brambilla}{Politecnico di Milano}{Milano}{Italy}
+\TwoSideBadge{Moritz Braun}{University of South Africa}{Pretoria}{South Africa}
+\TwoSideBadge{Jesse Lee Chan}{University of Texas at Austin}{Austin}{USA}
+\TwoSideBadge{S. Chandrasekaran}{University of California}{Santa Barbara}{USA}
+\TwoSideBadge{Joel Chaskalovic}{University Pierre and~Marie Curie}{Paris}{France}
+\TwoSideBadge{Heyrim Cho}{Brown University}{Providence}{USA}
+\TwoSideBadge{Minseok Choi}{Brown University}{Providence}{USA}
+\TwoSideBadge{Eric Chung}{The Chinese University of~Hong Kong}{Shatin}{Hong Kong}
+\TwoSideBadge{Irina C. Husanu}{Drexel University}{Philadelphia}{USA}
+\TwoSideBadge{Jonathan Cohen}{NVIDIA}{Ann Arbor}{USA}
+\TwoSideBadge{Emanuele Danovaro}{IMATI - CNR}{Genova}{Italy}
+\TwoSideBadge{Elise H. J. De Doncker}{Western Michigan University}{Kalamazoo}{USA}
+\TwoSideBadge{Carlo De Falco}{Politecnico di Milano}{Milano}{Italy}
+\TwoSideBadge{Ivo Doležel}{Czech Technical University}{Prague}{Czech Republic}
+\TwoSideBadge{Suchuan Dong}{Purdue University}{West Lafayette}{USA}
+\TwoSideBadge{Mahmoud El-Borai}{Alexandria University}{Alexandria}{Egypt}
+\TwoSideBadge{Omid Reza Esmaeili Motlagh}{University Teknikal}{Melaka}{Malaysia}
+\TwoSideBadge{Charbel Farhat}{Stanford University}{Stanford}{USA}
+\TwoSideBadge{Hadi Fekrmandi}{PhD Student}{Miami}{USA}
+\TwoSideBadge{Mike Fowler}{Clarkson University}{Potsdam}{USA}
+\TwoSideBadge{Jose Luis Galan}{Universidad de Malaga}{Malaga}{Spain}
+\TwoSideBadge{Mariangel Garcia}{San Diego State University}{San Diego}{USA}
+\TwoSideBadge{Victor E. Ginting}{University of Wyoming}{Laramie}{USA}
+\TwoSideBadge{Yuliya Gorb}{University of Houston}{Houston}{USA}
+\TwoSideBadge{Nicolin Govender}{University of Pretoria}{Pretoria}{South Africa}
+\TwoSideBadge{Ouahiba Guerri}{Université de La Rochelle}{La Rochelle}{France}
+\TwoSideBadge{Mingyan He}{Tongji University}{Shanghai}{China}
+\TwoSideBadge{Jeffrey Heys}{Montana State University}{Bozeman}{USA}
+\TwoSideBadge{\LARGE Seyed Mahdi Homayouni}{Islamic Azad University}{Isfahan}{Iran}
+\TwoSideBadge{Neihad H. Al-Khalidy}{SLR Consulting}{Lane Cove, NSW}{Australia}
+\TwoSideBadge{Rakesh Jha}{SVNIT}{Surat}{India}
+\TwoSideBadge{August Johansson}{UC Berkeley}{Berkeley}{USA}
+\TwoSideBadge{Suwan Juntiwasarakij}{King Mongkut's Institute of Technology Ladkrabang}{Bangkok}{Thailand}
+\TwoSideBadge{Andrew Kail}{University of Tennessee}{Knoxville}{USA}
+\TwoSideBadge{Pavel Karban}{University of West Bohemia}{Pilsen}{Czech Republic}
+\TwoSideBadge{Sandeep Koranne}{Mentor Graphics Corporation}{Wilsonville}{USA}
+\TwoSideBadge{Lukáš Korous}{University of West Bohemia}{Pilsen}{Czech Republic}
+\TwoSideBadge{Fritz Kretzschmar}{Technical University Darmstadt}{Darmstadt}{Germany}
+\TwoSideBadge{Zdeněk Kubík}{University of West Bohemia}{Pilsen}{Czech Republic}
+ \TwoSideBadge{Michal Kuráž}{Czech University of Life Sciences}{Prague}{Czech Republic}
+\TwoSideBadge{Pavel Kůs}{University of West Bohemia}{Pilsen}{Czech Republic}
+\TwoSideBadge{Dmitri Kuzmin}{University Erlangen-Nuremberg}{Erlangen}{Germany}
+\TwoSideBadge{Walid Larbi}{Conservatoire National des~Arts et~Métiers}{Paris}{France}
+\TwoSideBadge{Mats G Larson}{Umea University}{Umea}{Sweden}
+\TwoSideBadge{Raphaël Léger}{Inria Sophia-Antipolis Méditerrannée}{Sophia-Antipolis}{France}
+\TwoSideBadge{Jichun Li}{University of Nevada, Las Vegas}{Las Vegas}{USA}
+\TwoSideBadge{Shengtai Li}{Los Alamos National Laboratory}{Los Alamos}{USA}
+\TwoSideBadge{Wenyuan Liao}{University of Calgary}{Calgary}{Canada}
+\TwoSideBadge{Rainald Lohner}{George Mason University}{Fairfax, VA}{USA}
+\TwoSideBadge{Aaron Luttman}{National Security Technologies}{Las Vegas}{USA}
+\TwoSideBadge{František Mach}{University of West Bohemia}{Pilsen}{Czech Republic}
+\TwoSideBadge{Eric Machorro}{National Security Technologies}{Las Vegas}{USA}
+\TwoSideBadge{Hadi Manap}{University of Malaysia Pahang}{Kuantan}{Malaysia}
+\TwoSideBadge{Bradley McCaskill}{University of Wyoming}{Laramie}{USA}
+\TwoSideBadge{Scott Miller}{Penn State University}{State College}{USA}
+\TwoSideBadge{Misun Min}{Argonne National Laboratory}{Argonne}{USA}
+\TwoSideBadge{Bill Mitchell}{National Institute of Standards and~Technology}{Gaithersburg}{USA}
+\TwoSideBadge{Noraini Mohd Razali}{Universiti Malaysia Pahang}{Pekan}{Malaysia}
+\TwoSideBadge{Kamel Nafa}{Sultan Qaboos University}{Muscat}{Oman}
+\TwoSideBadge{Monika Neda}{University of Nevada, Las Vegas}{Las Vegas}{USA}
+\TwoSideBadge{Marco Nehmeier}{University of Würzburg}{Würzburg}{Germany}
+\TwoSideBadge{Jens Niegemann}{ETH Zurich}{Zurich}{Switzerland}
+\TwoSideBadge{Michele Nini}{Politecnico di Milano}{Milano}{Italy}
+\TwoSideBadge{Jan Novak}{Brno University of Technology}{Brno}{Czech Republic}
+\TwoSideBadge{Nicole Olivares}{Portland State University}{Portland}{USA}
+\TwoSideBadge{Jeffrey Scott Ovall}{University of Kentucky}{Lexington}{USA}
+\TwoSideBadge{Alberto Paoluzzi}{Roma Tre University}{Rome}{Italy}
+\TwoSideBadge{Dimitrios I. Papadimitriou}{University of Thessaly}{Volos}{Greece}
+\TwoSideBadge{Petra Pořízková}{Czech Technical University}{Prague}{Czech Republic}
+\TwoSideBadge{Muwook Pyeon}{Konkuk University}{Seoul}{Republic of Korea}
+\TwoSideBadge{Minvydas Ragulskis}{Kaunas University of Technology}{Kaunas}{Lithuania}
+\TwoSideBadge{Saeed Rahman}{Northwestern Polytechnical University}{Xian}{China}
+\TwoSideBadge{Barbara Re}{Politecnico di Milano}{Milano}{Italy}
+\TwoSideBadge{Nathan V. Roberts}{University of Texas at Austin}{Austin}{USA}
+\TwoSideBadge{James Rossmanith}{Iowa State University}{Ames}{USA}
+\TwoSideBadge{Florian Rudolf}{Vienna University of Technology}{Vienna}{Austria}
+\TwoSideBadge{Rafał Rumin}{AGH University of Science and Technology}{Krakow}{Poland}
+\TwoSideBadge{Karl Rupp}{Argonne National Laboratory}{Argonne}{USA}
+\TwoSideBadge{Andrea Sacconi}{Imperial College London}{London}{United Kingdom}
+\TwoSideBadge{Eduardo Sanchez}{San Diego State University}{San Diego}{USA}
+\TwoSideBadge{Bartosz Sawicki}{Warsaw University of Technology}{Warsaw}{Poland}
+\TwoSideBadge{Sascha Schnepp}{ETH Zurich}{Zurich}{Switzerland}
+\TwoSideBadge{Pitam Singh}{Motilal Nehru National Institute of Technology}{Allahabad}{India}
+\TwoSideBadge{Priyamvada Singh}{University of Allahabad}{Allahabad}{India}
+\TwoSideBadge{Pavel Solin}{University of Nevada}{Reno}{USA}
+\TwoSideBadge{Shailesh K. Srivastava}{Indian Institute of Technology}{Roorkee}{India}
+\TwoSideBadge{Adisak Sukul}{King Mongkut’s Institute of Technology Ladkrabang}{Bangkok}{Thailand}
+\TwoSideBadge{Yuzhou Sun}{University of Nevada, Las Vegas}{Las Vegas}{USA}
+\TwoSideBadge{Pengtao Sun}{University of Nevada, Las Vegas}{Las Vegas}{USA}
+\TwoSideBadge{Petr Sváček}{Czech Technical University}{Prague}{Czech Republic}
+\TwoSideBadge{Ghanshyam S. Thakur}{MANIT, Bhopal}{Bhopal}{India}
+\TwoSideBadge{Mary Thomas}{San Diego State University}{San Diego}{USA}
+\TwoSideBadge{Gretar Tryggvason}{University of Notre Dame}{Notre Dame}{USA}
+\TwoSideBadge{Federica Vignati}{Politecnico di Milano}{Milano}{Italy}
+\TwoSideBadge{Jan Vorel}{Czech Technical University}{Prague}{Czech Republic}
+\TwoSideBadge{Zhangping Wei}{The University of Mississippi}{Oxford}{USA}
+\TwoSideBadge{Josef Weinbub}{Vienna University of Technology}{Vienna}{Austria}
+\TwoSideBadge{Tim Wildey}{Sandia National Labs}{Albuquerque}{USA}
+\TwoSideBadge{Freddie D. Witherden}{Imperial College London}{London}{United Kingdom}
+\TwoSideBadge{Kwai Wong}{University of Tennessee}{Knoxville}{USA}
+\TwoSideBadge{Juncai Xu}{Hohai university}{Nanjing}{China}
+\TwoSideBadge{Pramod Kumar Yadav}{Motilal Nehru National Institute of~Technology}{Allahabad}{India}
+\TwoSideBadge{Xiu Yang}{Brown University}{Providence}{USA}
+\TwoSideBadge{Daegil  Yang}{Texas A\&M University }{College Station}{USA}
+\TwoSideBadge{Masayuki Yano}{Massachusetts Institute of Technology}{Cambridge}{USA}
+\TwoSideBadge{Masaya Yoshikawa}{Meijo university}{Nagoya}{Japan}
+\TwoSideBadge{Yue Yu}{Brown University}{Providence}{USA}
+\TwoSideBadge{Mohsen Zayernouri}{Brown University}{Providence}{USA}
+\TwoSideBadge{Wu Zhang}{Shanghai University}{Shanghai}{China}
+\TwoSideBadge{Aihui Zhou}{Chinese Academy of Sciences}{Beijing}{China}
+\TwoSideBadge{Dagmar Solinova}{FEMhub Inc.}{Reno}{USA}
+
 \end{document}
