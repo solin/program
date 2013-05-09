@@ -3,12 +3,12 @@
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 
-\textwidth 160mm
-\textheight 290mm
+\textwidth 165mm
+\textheight 250mm
 
 \oddsidemargin 0mm
 \evensidemargin 0mm
-\topmargin -10mm
+\topmargin -20mm
 
 \itemindent 0mm
 \parindent 10mm
@@ -36,14 +36,18 @@
 	
 	\noindent Dear {#1},\\
 	
-	We acknowledge the receipt of your registration fee for the 4th International Congress on Computational Engineering and Sciences (FEMTEC 2013) in the amount of {#2}.
-	\vspace{100pt}
+	We acknowledge the receipt of your registration fee for the 4th International Congress on Computational Engineering and Sciences (FEMTEC 2013) in the amount of {\bf #2}.
+	\vfill
 
 	\begin{figure}[!ht]
 	\hspace{-4mm}
-	%\includegraphics[width=3.5cm]{signature.pdf}
+	\includegraphics[width=3.5cm]{signature.pdf}
 	\vspace{-4mm}
 	\end{figure}
+    
+    \noindent
+    Lukáš Koudela\\
+    Conference Coordinator\\
 
 	\noindent
 	Pavel Solin\\
@@ -62,7 +66,7 @@
 \begin{document}
 \pagestyle{empty}
 
-\receipt{WRITE NAME HERE IN TEX SOURCE}{WRITE AMOUNT AND CURRENCY HERE}{WRITE AFFILIATION HERE}{PLACE FOR ADDRESS}{POSTAL CODE}{CITY}{STATE}
+%\receipt{WRITE NAME HERE IN TEX SOURCE}{WRITE AMOUNT AND CURRENCY HERE}{WRITE AFFILIATION HERE}{PLACE FOR ADDRESS}{POSTAL CODE}{CITY}{STATE}
 %\receipt{Mohammadmahdi  Abdollahzadehsangroudi}{WRITE AMOUNT AND CURRENCY HERE}{University of Beira Interior}{Rua de Saudade, nº59, 1º. DTº}{6200-386}{Covilha}{Portugal}
 %\receipt{Gabriel Aguilera}{WRITE AMOUNT AND CURRENCY HERE}{University of Malaga}{Blvd. Luis Pasteur s.n.}{29010}{Malaga}{Spain}
 %\receipt{Nissrine Akkari}{WRITE AMOUNT AND CURRENCY HERE}{University of La Rochelle}{23 avenue Albert Einstein}{17071}{La Rochelle}{France}
@@ -82,7 +86,7 @@
 %\receipt{Heyrim Cho}{WRITE AMOUNT AND CURRENCY HERE}{Brown University}{182 George st.}{02912}{Providence}{USA}
 %\receipt{Minseok Choi}{WRITE AMOUNT AND CURRENCY HERE}{Brown University}{182 George street}{RI02912}{Providence}{USA}
 %\receipt{Eric Chung}{WRITE AMOUNT AND CURRENCY HERE}{The Chinese University of Hong Kong}{Department of Mathematics}{0000}{Shatin}{Hong Kong}
-%\receipt{Irina Ciobanescu Husanu}{WRITE AMOUNT AND CURRENCY HERE}{Drexel University}{3001 Market Street}{19139}{Philadelphia}{USA}
+\receipt{Irina Ciobanescu Husanu}{450 USD}{Drexel University}{3001 Market Street}{19139}{Philadelphia}{USA}
 %\receipt{Jonathan Cohen}{WRITE AMOUNT AND CURRENCY HERE}{NVIDIA}{801 Brookside Drive}{48105}{Ann Arbor}{USA}
 %\receipt{Emanuele Danovaro}{WRITE AMOUNT AND CURRENCY HERE}{IMATI - CNR}{Via De Marini 6}{16129}{Genova}{Italy}
 %\receipt{Elise Helene J. De Doncker}{WRITE AMOUNT AND CURRENCY HERE}{Dept. of Computer Science, Western Michigan University}{1903 W. Michigan Avenue}{MI 49008}{Kalamazoo}{U.S.A.}
