@@ -13,12 +13,13 @@
 \usepackage{url}
 \usepackage{multicol}
 \usepackage{tabularx}
-%\usepackage{fullpage}
-%\usepackage{mathrsfs}
-%\usepackage{wrapfig}
-%\usepackage{color}
-%\usepackage{subfig}
-%\usepackage{eso-pic}
+
+\usepackage{fullpage}
+\usepackage{mathrsfs}
+\usepackage{wrapfig}
+\usepackage{color}
+\usepackage{subfig}
+\usepackage{eso-pic}
 
 \leftmargin=0.2cm
 \oddsidemargin=1.2cm
@@ -42,10 +43,6 @@
 \def\evec{\overline{\mathbf{e}}}
 
 \DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
-%\leftmargin=0cm
-%\oddsidemargin=1cm
-%\textwidth=14cm
-%\pagestyle{plain}
 
 \newcommand{ \etal}{\mbox{\emph{et al. }}}
 
@@ -69,8 +66,7 @@
 \parbox[b][\paperheight]{\paperwidth}{%
 \vfill
 \centering
-%\includegraphics[width=\paperwidth,height=\paperheight]{background_plzen.jpg}%
-%\includegraphics[width=\paperwidth,height=\paperheight]{background_tmp.jpg}%
+\includegraphics[width=\paperwidth,height=\paperheight]{img/StratSilhouette.pdf}%
 \vfill
 }}}
 
@@ -78,7 +74,7 @@
 \begin{document}
 
 % inputting background image
-%\AddToShipoutPicture{\BackgroundPic}
+\AddToShipoutPicture{\BackgroundPic}
 
 \vbox{}
 \pagestyle{empty}
@@ -87,13 +83,13 @@
 
 \textwidth=15.5cm
 
-%\ClearShipoutPicture
+\ClearShipoutPicture
 
 \newpage
 
 \section*{}%
 
-\vspace*{60mm}
+\vspace*{80mm}
 %ISBN 978-80-7043-898-5\\ \\
 This is a joint publication of the University of Nevada (Reno, USA),
 University of West Bohemia (Pilsen, Czech Republic),
@@ -103,20 +99,17 @@ FEMhub Inc (Reno, USA).\\
 
 \noindent
 FEMTEC 2013 \\
-3rd European Seminar on Computing\\
+4th International Congress on Computational Engineering and Sciences\\
 
 \noindent
 \begin{tabular}{ll}
 Editors: & Pavel Solin (University of Nevada, Institute of Thermomechanics) \\
- & Pavel Karban (University of West Bohemia) \\
- & Jaroslav Kruis (Czech Technical University) \\
-Publisher: & University of West Bohemia \\
- & Univerzitn\'{i} 8, 306 14 Plze\u{n}\\
- & Czech Republic\\
-Printed by: & Dragon Print, s.r.o \\
- & Klatovsk\'{a} 24, 301 00 Plze\u{n}\\
- & Czech Republic\\
-Year: & 2012\\
+		 & Lukáš Koudela (University of West Bohemia) \\
+Publisher: 	& ??? \\
+		 	& ???\\
+Printed by: & ??? \\
+			& ???\\
+Year: & 2013\\
 \end{tabular}
 
 \subsection*{Contact Information}
@@ -137,16 +130,14 @@ Phone: 1-775-848-7892
 \vspace{-5mm}
 \normalsize
 \begin{center}
-3rd European Seminar on Computing,
-Pilsen, Czech Republic,
-June 25 - 29, 2012
+4th International Congress on Computational Engineering and Sciences\\ Las Vegas, USA, May 19 - 24, 2013
 \end{center}
 \vspace{-3mm}
 
 \section*{Main Thematic Areas}%
 
-Multiphysics coupled problems; Higher-order computational methods
-Computing with Python; GPU computing; Cloud computing.
+Interdisciplinary computational projects, Multiphysics coupled problems, Higher-order computational methods, GPU computing, Cloud computing, Computing with Python and Octave, Open source projects.
+
 
 \section*{Application Areas}%
 
@@ -164,7 +155,6 @@ Theoretical results as well as applications are welcome. Application areas inclu
 \item Antonio DiCarlo (University Roma Tre, Rome, Italy)
 \item Ivo Dolezel (Czech Technical University, Prague, Czech Republic)
 \item Stefano Giani (University of Nottingham, UK)
-\item Glen Hansen (Sandia National Laboratories, Albuquerque, USA)
 \item Pavel Karban (University of West Bohemia, Pilsen, Czech Republic)
 \item Darko Koracin (Desert Research Institute, Reno, USA)
 \item Dmitri Kuzmin (University of Erlangen-Nuremberg, Germany)
@@ -172,7 +162,6 @@ Theoretical results as well as applications are welcome. Application areas inclu
 \item Jichun Li (University of Nevada, Las Vegas, USA)
 \item Shengtai Li (Los Alamos National Laboratory, Los Alamos, USA)
 \item Alberto Paoluzzi (University Roma Tre, Rome, Italy)
-\item Jean Ragusa (Texas A\&M University, College Station, USA)
 \item Francesca Rapetti (University of Nice, France)
 \item Sascha Schnepp (Technical University of Darmstadt, Germany)
 \item Stefan Turek (Technical University of Dortmund, Germany)
@@ -182,20 +171,62 @@ Theoretical results as well as applications are welcome. Application areas inclu
 
 \begin{itemize}
 \item Pavel Solin (University of Nevada, Reno \& Institute of Thermomechanics, Prague)
-\item Pavel Karban  (University of West Bohemia, Pilsen)
-\item Jaroslav Kruis (Czech Technical University, Prague)
+\item Valmor de Almeida (Oak Ridge National Laboratory, Oak Ridge, USA)
+\item Pavel Karban (University of West Bohemia, Pilsen)
+\item Jichun Li (University of Nevada, Las Vegas, USA)
+\item Sascha Schnepp (ETH Zurich, Switzerland)
+
 \end{itemize}
 
 \newpage
-{\ }
+%{\ }
 
 \tableofcontents
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \part{Abstracts of Keynote Lectures}
+%Carlo de Falco (Politecnico di Milano, Italy, on behalf of the GNU Octave project)
+%Charbel Farhat (Stanford University, USA)
+%Rainald Lohner (George Mason University, USA)
+%Jonathan Cohen (Nvidia, USA)
+%Gretar Tryggvason (University of Notre Dame, USA)
+%Aihui Zhou (Chinese Academy of Sciences, Beijing)
 
-\pagestyle{plain}
+\title{GNU Octave, a Free High-level Environment for Scientific Computing}
+\tocauthor{Carlo de Falco} \author{} \institute{}
+\maketitle
+\begin{center}
+{\large Carlo de Falco}\\
+MOX - Department of Mathematics - Politecnico di Milano\\
+{\tt carlo.defalco@polimi.it}
+\\ \vspace{4mm}
+{\large Carlo de Falco}\\
+MOX - Department of Mathematics - Politecnico di Milano\\
+{\tt carlo.defalco@polimi.it}
+\end{center}
+
+\section*{Abstract}
+GNU Octave is a Free high-level environment for
+ numerical computations. 
+It provides capabilities for the numerical solution of a wide range of linear and 
+nonlinear problems which may be accessed via an
+ interpreted scripting language, mostly 
+compatible with that of Matlab, or via a 
+C++ API. 
+It also provides extensive graphics capabilities for data visualization and manipulation. 
+In this talk we present an overview of some of the most advanced, yet least known, of the features of GNU Octave, which may be of interest to the Scientific Computing community. 
+We also discuss the history, the current status and some future perspectives in the development of the GNU Octave project.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{10}
+\bibitem{GNU Octave Manual Version 3}
+{\sc John W. Eaton and David Bateman and Søren Hauberg}. {GNU Octave Manual Version 3}. Network Theory Ltd.
+\end{thebibliography}
+
+
+
 \part{List of Participants}
+
 \title{Two Dimensional Numerical Modeling of Micro-shock Wave Creation in Nanosecond Plasma Actuators}
 \tocauthor{M. Abdollahzadeh} \author{} \institute{}
 \maketitle
@@ -1146,36 +1177,6 @@ We will give results and analyze parallel performance on the new NVIDIA Tesla Ke
 {\sc A. Zinani}. {The Expected Volume of a Tetrahedron whose Vertices are Chosen at Random in the Interior of a Cube}. Monatsh. Math. 139, 341-348 (2003).
 \end{thebibliography}
 
-\title{GNU Octave, a Free High-level Environment for Scientific Computing}
-\tocauthor{Carlo de Falco} \author{} \institute{}
-\maketitle
-\begin{center}
-{\large Carlo de Falco}\\
-MOX - Department of Mathematics - Politecnico di Milano\\
-{\tt carlo.defalco@polimi.it}
-\\ \vspace{4mm}
-{\large Carlo de Falco}\\
-MOX - Department of Mathematics - Politecnico di Milano\\
-{\tt carlo.defalco@polimi.it}
-\end{center}
-
-\section*{Abstract}
-GNU Octave is a Free high-level environment for
- numerical computations. 
-It provides capabilities for the numerical solution of a wide range of linear and 
-nonlinear problems which may be accessed via an
- interpreted scripting language, mostly 
-compatible with that of Matlab, or via a 
-C++ API. 
-It also provides extensive graphics capabilities for data visualization and manipulation. 
-In this talk we present an overview of some of the most advanced, yet least known, of the features of GNU Octave, which may be of interest to the Scientific Computing community. 
-We also discuss the history, the current status and some future perspectives in the development of the GNU Octave project.
-
-\bibliographystyle{plain}
-\begin{thebibliography}{10}
-\bibitem{GNU Octave Manual Version 3}
-{\sc John W. Eaton and David Bateman and Søren Hauberg}. {GNU Octave Manual Version 3}. Network Theory Ltd.
-\end{thebibliography}
 
 \title{Model of System Disk-Shaft Mutually Fixed by Induction Shrink Fit}
 \tocauthor{Ivo Dolezel} \author{} \institute{}
