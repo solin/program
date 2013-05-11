@@ -3232,7 +3232,7 @@ where $u$ is the velocity, $b$ is the magnetic field, $\nu_{1}$ is the kinematic
 
 Our main results are
 
-\textbf{Theorem 1.} Suppose  that $u_{0},b_{0}\in H^{s}(R^{3}),$ $s\geq 3$ and $\nabla \cdot u_{0}=0=\nabla \cdot b_{0}$, in the sense of distribution. Assume that a pair of $(u,b)$ is the Leray-Hopf weak solution satisfying $(1.1)-(1.4)$ on $[0,T].$ If $ \nabla P\in L^{\alpha, \gamma}$ and $b\in L^{3\alpha, 3\gamma}$ with $\frac {2} {\alpha}+\frac {3}{\gamma}\leq 3,$
+\textit{Theorem 1.} Suppose  that $u_{0},b_{0}\in H^{s}(R^{3}),$ $s\geq 3$ and $\nabla \cdot u_{0}=0=\nabla \cdot b_{0}$, in the sense of distribution. Assume that a pair of $(u,b)$ is the Leray-Hopf weak solution satisfying $(1.1)-(1.4)$ on $[0,T].$ If $ \nabla P\in L^{\alpha, \gamma}$ and $b\in L^{3\alpha, 3\gamma}$ with $\frac {2} {\alpha}+\frac {3}{\gamma}\leq 3,$
 $1\leq \gamma\leq\infty,$ or $\left\|\nabla P\right\|_{L^ {1}},$ $\left\|\nabla P\right\|_{L^ {\frac{2}{3},\infty}},$ $\left\|b\right\|_{L^ {3}},$ and $\left\|b\right\|_{L^ {2,\infty}}$ are sufficiently small, then solution remains smooth on $[0,T].$
 
 
@@ -3308,8 +3308,8 @@ University of Texas at Austin\\
 \end{center}
 
 \section*{Abstract}
-The discontinuous Petrov-Galerkin methodology with optimal test functions (DPG) proposed by L. Demkowicz and J. Gopalakrishnan guarantees the optimality of the solution in an energy norm, and provides several features facilitating adaptive schemes.  Whereas Bubnov-Galerkin methods use identical trial and test spaces, Petrov-Galerkin methods allow these function spaces to differ. In DPG, test functions are computed on the fly and are chosen to minimize the residual. For well-posed problems with sufficiently regular solutions, DPG can be shown to converge at optimal rates---the inf-sup constants governing the convergence are mesh-independent, and of the same order as those governing the continuous problem. DPG also provides an accurate mechanism for \emph{measuring} (not merely estimating) the error, and this can be used to drive adaptive mesh refinements.\\
-\\
+The discontinuous Petrov-Galerkin methodology with optimal test functions (DPG) proposed by L. Demkowicz and J. Gopalakrishnan guarantees the optimality of the solution in an energy norm, and provides several features facilitating adaptive schemes.  Whereas Bubnov-Galerkin methods use identical trial and test spaces, Petrov-Galerkin methods allow these function spaces to differ. In DPG, test functions are computed on the fly and are chosen to minimize the residual. For well-posed problems with sufficiently regular solutions, DPG can be shown to converge at optimal rates---the inf-sup constants governing the convergence are mesh-independent, and of the same order as those governing the continuous problem. DPG also provides an accurate mechanism for \emph{measuring} (not merely estimating) the error, and this can be used to drive adaptive mesh refinements.
+
 In this work, we use Camellia---a software toolbox for rapid development of DPG solvers, built atop Sandia's Trilinos library of packages---to investigate adaptivity, particularly in the context of incompressible flow problems.  Camellia supports 2D meshes of triangles and quads of variable polynomial order, provides mechanisms for easy specification of DPG variational forms, and supports $h$- and $p$- refinements and distributed computation of the stiffness matrix, among other features.
 
 \bibliographystyle{plain}
