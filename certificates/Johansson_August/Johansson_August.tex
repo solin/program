@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\textwidth 160mm
+\textheight 290mm
+
+\oddsidemargin 0mm
+\evensidemargin 0mm
+\topmargin -10mm
+
+\itemindent 0mm
+\parindent 10mm
+
+\newcommand{\certificate}[6]
+{
+	\begin{figure}[h!]
+		\includegraphics[width=\textwidth]{femhub_logo.png}
+	\end{figure}
+
+	\vspace{50pt}
+	
+	\noindent
+	{#1}\\
+	{#2}\\
+	{#3}\\
+	{#4}\ \ {#5}, {#6}\\
+	\vspace{50pt}
+	
+	\begin{flushright}
+		May 24, 2013\\
+		Las Vegas, USA
+	\end{flushright}
+	\vspace{30pt}
+	
+	\noindent Dear {#1},\\
+
+	This is a formal acknowledgement of your participation at the 4th International Congress on Computational Engineering and Sciences (FEMTEC 2013), that was held on~May 19 - 24, 2013 in Las Vegas, USA.
+	\vspace{100pt}
+
+	\noindent
+	Pavel Solin\\
+	FEMhub Inc.\\
+	5490 Twin Creeks Dr.\\
+	Reno, NV 89523\\
+	Phone: (775) 848-7892\\
+	E-mail: pavel@nclab.com\\
+	
+	\begin{figure}[h!]
+		\includegraphics[width=\textwidth]{femhub_footer.png}
+	\end{figure}
+	\newpage
+}
+
+\begin{document}
+\pagestyle{empty}
+
+\certificate{August Johansson}{UC Berkeley}{1300 Delaware St. Apt 24}{94702}{Berkeley}{USA}
+\end{document}
