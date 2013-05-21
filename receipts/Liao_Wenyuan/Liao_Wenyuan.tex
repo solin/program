@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\textwidth 160mm
+\textheight 290mm
+
+\oddsidemargin 0mm
+\evensidemargin 0mm
+\topmargin -10mm
+
+\itemindent 0mm
+\parindent 10mm
+
+\newcommand{\receipt}[7]
+{
+	\begin{figure}[h!]
+		\includegraphics[width=\textwidth]{femhub_logo.png}
+	\end{figure}
+
+	\vspace{50pt}
+	
+	\noindent
+	{#1}\\
+	{#3}\\
+	{#4}\\
+	{#5}\quad {#6}, {#7}\\
+	\vspace{50pt}
+	
+	\begin{flushright}
+		May 24, 2013\\
+		Las Vegas, USA
+	\end{flushright}
+	\vspace{30pt}
+	
+	\noindent Dear {#1},\\
+	
+	We acknowledge the receipt of your registration fee for the 4th International Congress on Computational Engineering and Sciences (FEMTEC 2013) in the amount of {#2}.
+	\vspace{100pt}
+
+	\begin{figure}[!ht]
+	\hspace{-4mm}
+	%\includegraphics[width=3.5cm]{signature.pdf}
+	\vspace{-4mm}
+	\end{figure}
+
+	\noindent
+	Pavel Solin\\
+	FEMhub Inc.\\
+	5490 Twin Creeks Dr.\\
+	Reno, NV 89523\\
+	Phone: (775) 848-7892\\
+	E-mail: pavel@nclab.com\\
+	
+	\begin{figure}[h!]
+		\includegraphics[width=\textwidth]{femhub_footer.png}
+	\end{figure}
+	\newpage
+}
+
+\begin{document}
+\pagestyle{empty}
+
+\receipt{Wenyuan Liao}{WRITE AMOUNT AND CURRENCY HERE}{University of Calgary}{2500 University Dr. NW}{T2N1N4}{Calgary}{Canada}
+\end{document}
